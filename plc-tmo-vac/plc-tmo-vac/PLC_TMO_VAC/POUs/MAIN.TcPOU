@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="MAIN" Id="{53e436ba-9af9-4ca4-ad7b-a6b2399fa417}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	(*HXR Accelerator side PLC Interface*)
+	{attribute 'TcLinkTo' :=	'TIIB[EBD_E5_EL1008]^Channel 1^Input;
+	'}
+	i_xUpstreamTreaty_PressOK	AT	%I*	:	BOOL;
+	
+	{attribute 'TcLinkTo' :=	'TIIB[EBD_E8_EL2794]^Channel 1^Output;
+	'}
+	q_xUpstreamTreaty_PressOK	AT	%Q*	:	BOOL;
+	
+	(*HXR Gas Attenuator PLC Interface*)
+
+	(*TXI PLC Interface*)
+
+	(*XPP PLC Interface*)
+
+	fbLogHandler : FB_LogHandler;
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+fbLogHandler();
+
+// Run the Diagnostics PRG
+DIAGNOSTICS();
+
+(* Gauges*)
+
+
+
+
+
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="GVL_FEE_Device" Id="{1e099b9b-502c-4923-9f77-b69bd66fefa8}">
+    <Declaration><![CDATA[//{attribute 'qualified_only'}
+VAR_GLOBAL
+
+	(*Upstream Interface*)
+	(*Gauges*)
+	USG_GCC: FB_TGCC_ADS;
+	DSG_GCC: FB_TGCC_ADS;	
+
+(* Isolation gate valves*)
+(* example
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:VGC:10 '}
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_01_EB_1 (EP2338-0002)]^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[L0S6_PNL_01_EB_1 (EP2338-0002)]^Channel 2^Input;
+								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_01_EB_1 (EP2338-0002)]^Channel 11^Output'}
+*)
+	{attribute 'pytmc' :=' pv: TV1K4_VGC_01 '}
+	TV1K4_VGC_01: FB_VGC;
+	
+	{attribute 'pytmc' :=' pv: TV1K4_VGC_02 '}
+ 	TV1K4_VGC_02: FB_VGC;
+
+	{attribute 'pytmc' :=' pv: ST3K4_PPS_VGC_01 '}
+	ST3K4_PPS_VGC_01 : FB_VGC;
+	
+(* Pirani*)
+	{attribute 'pytmc' :=' pv: TV1K4_GPI_01 '}
+	TV1K4_GPI_01 : FB_MKS275;
+	
+	{attribute 'pytmc' :=' pv: ST1K4_TEST_GPI_01 '}
+	ST1K4_TEST_GPI_01 : FB_MKS275;
+	
+	{attribute 'pytmc' :=' pv: ST2K4_BCS_GPI_01 '}
+	ST2K4_BCS_GPI_01 : FB_MKS275;	
+	
+	{attribute 'pytmc' :=' pv: PC4K4_XTES_GPI_01 '}
+	PC4K4_XTES_GPI_01 : FB_MKS275;
+
+
+(* Cold Cathod*)
+
+(*example
+	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[FEE_L0S14_EP2_EP3174-0002]^AI Standard Channel 2^Value;
+								 .q_xHV_DIS		:= 	TIIB[FEE_L0S14_EP3_EP2624-0002]^Channel 2^Output
+	'}	
+	{attribute 'pytmc' := '
+		pv: MR1L1:TXI:GCC:01
+		io: io
+	'}
+	MR1L1_TXI_GCC_01 : FB_MKS500_EP;
+	
+	*)
+
+	{attribute 'pytmc' :=' pv: TV1K4_GCC_01 '}
+	TV1K4_GCC_01 : FB_MKS500_EP;
+	
+	{attribute 'pytmc' :=' pv: ST1K4_TEST_GCC_01 '}
+	ST1K4_TEST_GCC_01 : FB_MKS500_EP;
+	
+	{attribute 'pytmc' :=' pv: ST2K4_BCS_GCC_01 '}
+	ST2K4_BCS_GCC_01 : FB_MKS500_EP;	
+	
+	{attribute 'pytmc' :=' pv: PC4K4_XTES_GCC_01 '}
+	PC4K4_XTES_GCC_01 : FB_MKS500_EP;
+	
+	
+(* Ion Pumps *)	
+	
+(*example
+	{attribute 'TcLinkTo' := 	'.i_iPRESS		:=	TIIB[QPC_E1_EL3064]^AI Standard Channel 1^Value;
+								 .i_xSP_DI		:= 	TIIB[QPC_E2_EL1004]^Channel 1^Input;
+								 .q_xHVEna_DO	:= 	TIIB[QPC_E3_EL2794]^Channel 1^Output
+	'}
+	{attribute 'pytmc' := '
+		pv: RTDSL0:VAC:PIP:01
+		io: io
+	'}
+	RTDSL0_PIP_01 : FB_PIP_Gamma;
+	*)
+
+	{attribute 'pytmc' :=' MR1K4_SOMS_PIP_01 '}
+	MR1K4_SOMS_PIP_01 : FB_PIP_Gamma;
+	
+	{attribute 'pytmc' :=' ST1K4_TEST_PIP_01 '}
+	ST1K4_TEST_PIP_01 : FB_PIP_Gamma;	
+	
+	{attribute 'pytmc' :=' ST2K4_BCS_PIP_01 '}
+	ST2K4_BCS_PIP_01 : FB_PIP_Gamma;	
+
+	{attribute 'pytmc' :=' ST3K4_PPS_PIP_01 '}
+	ST3K4_PPS_PIP_01 : FB_PIP_Gamma;		
+	
+	{attribute 'pytmc' :=' PC4K4_XTES_PIP_01 '}
+	PC4K4_XTES_PIP_01 : FB_PIP_Gamma;		
+
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

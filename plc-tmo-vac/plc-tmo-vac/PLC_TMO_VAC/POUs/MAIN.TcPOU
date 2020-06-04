@@ -3,20 +3,6 @@
   <POU Name="MAIN" Id="{53e436ba-9af9-4ca4-ad7b-a6b2399fa417}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
-	(*HXR Accelerator side PLC Interface*)
-	{attribute 'TcLinkTo' :=	'TIIB[EBD_E5_EL1008]^Channel 1^Input;
-	'}
-	i_xUpstreamTreaty_PressOK	AT	%I*	:	BOOL;
-	
-	{attribute 'TcLinkTo' :=	'TIIB[EBD_E8_EL2794]^Channel 1^Output;
-	'}
-	q_xUpstreamTreaty_PressOK	AT	%Q*	:	BOOL;
-	
-	(*HXR Gas Attenuator PLC Interface*)
-
-	(*TXI PLC Interface*)
-
-	(*XPP PLC Interface*)
 
 	fbLogHandler : FB_LogHandler;
 	
@@ -29,7 +15,9 @@ fbLogHandler();
 // Run the Diagnostics PRG
 DIAGNOSTICS();
 
-(* Gauges*)
+(* FEE devices*)
+PRG_FEE ();
+
 
 
 
@@ -38,5 +26,12 @@ DIAGNOSTICS();
 
 ]]></ST>
     </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="3" Count="6" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="10" Count="5" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

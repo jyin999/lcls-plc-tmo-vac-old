@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="GVL_FS" Id="{c70c140d-7b1b-4b02-af92-47ef554d1d4f}">
+    <Declaration><![CDATA[//{attribute 'qualified_only'}
+VAR_GLOBAL
+	
+	{attribute 'TcLinkTo' := 	'.i_xOPNLS	:=	TIIB[K4S20-E1-FSV (EL1004)]^Channel 2^Input;
+								 .i_xClsLS	:=	TIIB[K4S20-E1-FSV (EL1004)]^Channel 1^Input;
+								 .q_xClose_A	:=	TIIB[K4S20-E2-FSV (EL2202)]^Channel 1^Output;
+								 .q_xClose_B	:=	TIIB[K4S20-E2-FSV (EL2202)]^Channel 2^Output;
+								 .q_xClose_C	:=	TIIB[K4S20-E3-FSV (EL2202)]^Channel 1^Output;
+								 .q_xOPN_DO		:=	TIIB[K4S20-E3-FSV (EL2202)]^Channel 2^Output;
+								 .i_xTrigger	:= TIIB[R20_EK0_E5 (EL1124)]^Channel 1^Input
+								 
+	'}
+	{attribute 'pytmc' := '
+		pv: TV1K4:VFS:01
+		
+	'}
+	TV1K4_VFS_01 : FB_VFS;
+	
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

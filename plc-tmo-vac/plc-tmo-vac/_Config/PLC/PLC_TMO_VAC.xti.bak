@@ -202,14 +202,6 @@
 			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
 				<Var>
-					<Name>GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_FEE_Device.TV1K4_VGC_01.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -284,6 +276,14 @@
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
+				<Var>
+					<Name>GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
 			</Vars>
 			<Vars VarGrpType="8">
 				<Name>PlcTask Retains</Name>
@@ -353,7 +353,7 @@
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940_K4S20_EB3 (EP2624-0002)">
 				<Link VarA="PlcTask Outputs^GVL_FEE_Device.TV1K4_GCC_01.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940_K4S20_EK0  (EK1100)^K420-E13-FSV (EL2202)">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940_K4S20_EK0  (EK1100)^K4S20-E3-FSV (EL2202)">
 				<Link VarA="PlcTask Outputs^GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut" VarB="Channel 1^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut" VarB="Channel 2^Output" AutoLink="true"/>
 			</OwnerB>

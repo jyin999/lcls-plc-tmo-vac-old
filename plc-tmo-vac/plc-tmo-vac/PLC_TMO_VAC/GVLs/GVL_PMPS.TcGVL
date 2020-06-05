@@ -8,21 +8,21 @@ VAR_GLOBAL
     {attribute 'pytmc' := '
     {pv: PLC:TMO:VAC:FF1    '}
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[K420-E13-FSV (EL2202)]^Channel 1^Output'}
-    g_FastFaultOutput1  :   FB_HardwareFFOutput;	//FFO for ST1L0_XTES's Upstream Components
+    g_FastFaultOutput1  :   FB_HardwareFFOutput;	//FFO for ST3K4_PPS's Upstream Components
 	
 	 {attribute 'pytmc' := 'pv: PLC:TMO:VAC:FF2  '}
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[K420-E13-FSV (EL2202)]^Channel 2^Output'}
-    g_FastFaultOutput2  :   FB_HardwareFFOutput;	//FFO for ST1L0_XTES's Downstream Components
+    g_FastFaultOutput2  :   FB_HardwareFFOutput;	//FFO for ST3K4_PPS's Downstream Components
 	
 	{attribute 'pytmc' := '    'pv: PLC:TMO:VAC:RESET:FF1    '}
-	xReset_PMPS_FFO1	:	BOOL	:=	FALSE;		//FFO RESET for ST1L0_XTES's Upstream Components
+	xReset_PMPS_FFO1	:	BOOL	:=	FALSE;		//FFO RESET for ST3K4_PPS's Upstream Components
 	{attribute 'pytmc' := '    pv: PLC:TMO:VAC:RESET:FF2  '}
-	xReset_PMPS_FFO2	:	BOOL	:=	FALSE;		//FFO RESET for ST1L0_XTES's Downstream Components
+	xReset_PMPS_FFO2	:	BOOL	:=	FALSE;		//FFO RESET for ST3K4_PPS's Downstream Components
 	
 	
-	xTMO_FEE_MPS_OK: BOOL;
+	xTMO_FEE_MPS_OK: BOOL := TRUE;
 	
-	xTMO_NEH_MPS_OK: BOOL;
+	xTMO_NEH_MPS_OK: BOOL := TRUE;
 
 END_VAR]]></Declaration>
   </GVL>

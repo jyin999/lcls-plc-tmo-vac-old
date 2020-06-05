@@ -353,10 +353,6 @@
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940_K4S20_EB3 (EP2624-0002)">
 				<Link VarA="PlcTask Outputs^GVL_FEE_Device.TV1K4_GCC_01.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940_K4S20_EK0  (EK1100)^K420-E13-FSV (EL2202)">
-				<Link VarA="PlcTask Outputs^GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut" VarB="Channel 2^Output" AutoLink="true"/>
-			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940_K4S24_EB1 (EP3174-0002)">
 				<Link VarA="PlcTask Inputs^GVL_FEE_Device.ST1K4_TEST_GCC_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_FEE_Device.ST1K4_TEST_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>

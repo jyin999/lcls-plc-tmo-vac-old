@@ -202,14 +202,6 @@
 			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
 				<Var>
-					<Name>GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_FEE_Device.TV1K4_VGC_01.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -282,6 +274,14 @@
 					<Comment>
 						<![CDATA[ Enable High Voltage when TRUE]]>
 					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>

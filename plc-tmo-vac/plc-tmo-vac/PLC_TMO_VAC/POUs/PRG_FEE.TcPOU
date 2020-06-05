@@ -24,7 +24,7 @@ GEM1_VGC_10(i_stUSG := USG_GCC.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := TRUE
 		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
 *)
 	TV1K4_VGC_01(
-				i_stUSG := USG_GCC.IG, 
+				i_stUSG := MR1K4_SOMS_GCC_01.IG, 
 				i_stDSG:= TV1k4_GCC_01.IG, 
 				i_xDis_DPIlk := TRUE, 
 				i_xEPS_OK := TRUE,
@@ -60,7 +60,7 @@ GEM1_VGC_10(i_stUSG := USG_GCC.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := TRUE
 	(*example
 	SP1L0_KMONO_PIP_01(i_stGauge:=SP1L0_KMONO_GCC_01.IG, stPump=>);*)		
 
-	MR1K4_SOMS_PIP_01(i_stGauge := USG_GCC.IG, stPump=>);
+	MR1K4_SOMS_PIP_01(i_stGauge := MR1K4_SOMS_GCC_01.IG, stPump=>);
 	ST1K4_TEST_PIP_01(i_stGauge := ST1K4_TEST_GCC_01.IG, stPump=>);
 	ST2K4_BCS_PIP_01(i_stGauge := ST2K4_BCS_GCC_01.IG, stPump=>);
 	ST3K4_PPS_PIP_01(i_stGauge := ST2K4_BCS_GCC_01.IG, stPump=>);

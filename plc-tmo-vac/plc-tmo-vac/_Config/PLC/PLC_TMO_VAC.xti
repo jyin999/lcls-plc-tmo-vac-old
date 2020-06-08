@@ -27,14 +27,21 @@
 			<Vars VarGrpType="1">
 				<Name>PlcTask Inputs</Name>
 				<Var>
-					<Name>L2SI_Vacuum_Library.Global_Variables.g_stSystem.I_EcatMaster1</Name>
+					<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
 					<Comment>
 						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
 					</Comment>
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
-					<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+					<Name>LCLS_Vacuum.Global_Variables.g_stSystem.I_EcatMaster1</Name>
+					<Comment>
+						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
+					</Comment>
+					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+				</Var>
+				<Var>
+					<Name>LCLS_Vacuum.LCLSVacuumSerialDriverLib.L2SI_Vacuum_Library.Global_Variables.g_stSystem.I_EcatMaster1</Name>
 					<Comment>
 						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
 					</Comment>
@@ -86,6 +93,13 @@
 				<Var>
 					<Name>GVL_FEE_Device.ST3K4_PPS_VGC_01.i_xClsLS</Name>
 					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_FEE_Device.MR1K4_GCC_01_ADS.i_iPRESS_R</Name>
+					<Comment>
+						<![CDATA[ Controls and I/Os]]>
+					</Comment>
+					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_FEE_Device.TV1K4_GPI_01.i_iPRESS_R</Name>
@@ -211,6 +225,13 @@
 				</Var>
 				<Var>
 					<Name>GVL_FEE_Device.ST3K4_PPS_VGC_01.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_FEE_Device.MR1K4_GCC_01_ADS.q_xHV_DIS</Name>
+					<Comment>
+						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
+					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>

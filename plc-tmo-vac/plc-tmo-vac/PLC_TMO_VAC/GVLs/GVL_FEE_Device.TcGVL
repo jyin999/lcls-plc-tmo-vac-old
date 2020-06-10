@@ -4,7 +4,14 @@
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
 
-
+(* upstream vacuum ok *)
+   {attribute 'pytmc' :=' pv: USVAC:OK:HI '}
+   {attribute 'TcLinkTo' := 	' := 	TIIB[CX0_E2_EXILK (EL1008)]^Channel 1^Input	'}	
+   USVacOk_HI AT%I* : BOOL; (* upstream vacuum <10E-6, for mirror VGC interlock *)
+ 
+ 	{attribute 'pytmc' :=' pv: USVAC:OK:LO '}
+   {attribute 'TcLinkTo' := 	'	:= 	TIIB[CX0_E2_EXILK (EL1008)]^Channel 2^Input	'}	  
+   USVacOk_LO AT%I* : BOOL; (* upstream vacuum <10E-4, for Ion pump interlock *)
 
 
 (* Isolation gate valves*)
@@ -29,12 +36,7 @@ VAR_GLOBAL
 	
 (* Pirani & Cold Cathode*)
 
-	(*Upstream Interface*)
-	(*Gauges*)
 	
-	{attribute 'pytmc' :=' pv: MR1K4:GCC:01:ADS '}
-//	(*MR1K4_GCC_01_ADS: FB_TGCC_ADS;*)
-	MR1K4_GCC_01_ADS: FB_MKS500_EP;
 
 	{attribute 'pytmc' :=' pv: TV1K4:GPI:01 '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[B940_K4S20_EB2  (EP3174-0002)]^AI Standard Channel 1^Value	'}
@@ -102,28 +104,28 @@ VAR_GLOBAL
 	'}
 	MR1K4_SOMS_PIP_01 : FB_PIP_Gamma;
 	
-	{attribute 'pytmc' :=' pv : ST1K4:TEST:PIP:01 '}
+	{attribute 'pytmc' :=' pv: ST1K4:TEST:PIP:01 '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS		:=	TIIB[CX0_E6_QPC1 (EL3064)]^AI Standard Channel 2^Value;
 								 .i_xSP_DI		:= 	TIIB[CX0_E7_QPC1 (EL1004)]^Channel 2^Input;
 								 .q_xHVEna_DO	:= 	TIIB[CX0_E8_QPC1 (EL2794)]^Channel 2^Output
 	'}	
 	ST1K4_TEST_PIP_01 : FB_PIP_Gamma;	
 	
-	{attribute 'pytmc' :=' pv : ST2K4:BCS:PIP:01 '}
+	{attribute 'pytmc' :=' pv: ST2K4:BCS:PIP:01 '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS		:=	TIIB[CX0_E6_QPC1 (EL3064)]^AI Standard Channel 3^Value;
 								 .i_xSP_DI		:= 	TIIB[CX0_E7_QPC1 (EL1004)]^Channel 3^Input;
 								 .q_xHVEna_DO	:= 	TIIB[CX0_E8_QPC1 (EL2794)]^Channel 3^Output
 	'}
 	ST2K4_BCS_PIP_01 : FB_PIP_Gamma;	
 
-	{attribute 'pytmc' :=' pv : ST3K4:PPS:PIP:01 '}
+	{attribute 'pytmc' :=' pv: ST3K4:PPS:PIP:01 '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS		:=	TIIB[CX0_E6_QPC1 (EL3064)]^AI Standard Channel 4^Value;
 								 .i_xSP_DI		:= 	TIIB[CX0_E7_QPC1 (EL1004)]^Channel 4^Input;
 								 .q_xHVEna_DO	:= 	TIIB[CX0_E8_QPC1 (EL2794)]^Channel 4^Output
 	'}
 	ST3K4_PPS_PIP_01 : FB_PIP_Gamma;		
 	
-	{attribute 'pytmc' :=' pv : PC4K4:XTES:PIP:01 '}
+	{attribute 'pytmc' :=' pv: PC4K4:XTES:PIP:01 '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS		:=	TIIB[CX0_E9_QPC2 (EL3064)]^AI Standard Channel 1^Value;
 								 .i_xSP_DI		:= 	TIIB[CX0_E10_QPC2 (EL1004)]^Channel 1^Input;
 								 .q_xHVEna_DO	:= 	TIIB[CX0_E11_QPC2 (EL2794)]^Channel 1^Output

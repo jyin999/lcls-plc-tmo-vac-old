@@ -7,11 +7,11 @@ VAR_GLOBAL
 //Example implementation of the FFO
     {attribute 'pytmc' := '
     {pv: PLC:TMO:VAC:FF1    '}
-    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[K420-E13-FSV (EL2202)]^Channel 1^Output'}
+    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[CX0_E1 (EL2202)]^Channel 1^Output'}
     g_FastFaultOutput1  :   FB_HardwareFFOutput;	//FFO for ST3K4_PPS's Upstream Components
 	
 	 {attribute 'pytmc' := 'pv: PLC:TMO:VAC:FF2  '}
-    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[K420-E13-FSV (EL2202)]^Channel 2^Output'}
+    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[CX0_E1 (EL2202)]^Channel 2^Output'}
     g_FastFaultOutput2  :   FB_HardwareFFOutput;	//FFO for ST3K4_PPS's Downstream Components
 	
 	{attribute 'pytmc' := '    'pv: PLC:TMO:VAC:RESET:FF1    '}

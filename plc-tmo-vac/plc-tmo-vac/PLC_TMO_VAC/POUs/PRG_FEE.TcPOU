@@ -4,6 +4,14 @@
     <Declaration><![CDATA[PROGRAM PRG_FEE
 VAR
 ADS_connection_counter : UDINT;	
+
+(*Upstream Interface*)
+	
+    USG_PIP : ST_VG;
+	
+	USG_VGC : ST_VG;
+
+
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -16,8 +24,26 @@ END_VAR
 	iWatchdog:=ADS_connection_counter , 
 	IG=> , 
 	bError=> ); *)
-	  
+	(* if upstream vacuum ok, set upstream press at good levels *)  
+    IF USVacOk_HI THEN 
+		USG_VGC.xAT_VAC := TRUE;
+		USG_VGC.rPRESS := 10E-6;
+		USG_VGC.xPRESS_OK := TRUE;
+	ELSE
+		USG_VGC.xPRESS_OK := FALSE;
+		USG_VGC.xAT_VAC := FALSE;
+	END_IF
 
+    IF USVacOk_LO THEN 
+		USG_PIP.rPRESS := 10E-4;
+		USG_PIP.xPRESS_OK := TRUE;
+		USG_PIP.xAT_VAC := TRUE;
+	ELSE
+		USG_PIP.xPRESS_OK := FALSE;
+		USG_PIP.xAT_VAC := FALSE;
+	END_IF 
+
+	(* check other gauges*)
 	TV1K4_GPI_01(); 
 	ST1K4_TEST_GPI_01(); 
 	ST2K4_BCS_GPI_01();
@@ -34,7 +60,7 @@ GEM1_VGC_10(i_stUSG := USG_GCC.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := TRUE
 		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
 *)
 	TV1K4_VGC_01(
-				i_stUSG := MR1K4_GCC_01_ADS.IG, 
+				i_stUSG := USG_VGC, 
 				i_stDSG:= TV1k4_GCC_01.IG, 
 				i_xDis_DPIlk := FALSE, 
 				i_xEPS_OK := TRUE,
@@ -70,7 +96,7 @@ GEM1_VGC_10(i_stUSG := USG_GCC.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := TRUE
 	(*example
 	SP1L0_KMONO_PIP_01(i_stGauge:=SP1L0_KMONO_GCC_01.IG, stPump=>);*)		
 
-	MR1K4_SOMS_PIP_01(i_stGauge := MR1K4_GCC_01_ADS.IG, stPump=>);
+	MR1K4_SOMS_PIP_01(i_stGauge := USG_PIP, stPump=>);
 	ST1K4_TEST_PIP_01(i_stGauge := ST1K4_TEST_GCC_01.IG, stPump=>);
 	ST2K4_BCS_PIP_01(i_stGauge := ST2K4_BCS_GCC_01.IG, stPump=>);
 	ST3K4_PPS_PIP_01(i_stGauge := ST2K4_BCS_GCC_01.IG, stPump=>);
@@ -84,6 +110,18 @@ GEM1_VGC_10(i_stUSG := USG_GCC.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := TRUE
       <LineId Id="66" Count="0" />
       <LineId Id="68" Count="0" />
       <LineId Id="65" Count="0" />
+      <LineId Id="118" Count="0" />
+      <LineId Id="84" Count="2" />
+      <LineId Id="88" Count="0" />
+      <LineId Id="119" Count="0" />
+      <LineId Id="83" Count="0" />
+      <LineId Id="94" Count="0" />
+      <LineId Id="89" Count="2" />
+      <LineId Id="120" Count="0" />
+      <LineId Id="92" Count="1" />
+      <LineId Id="121" Count="0" />
+      <LineId Id="81" Count="0" />
+      <LineId Id="79" Count="1" />
       <LineId Id="4" Count="56" />
       <LineId Id="2" Count="0" />
     </LineIds>

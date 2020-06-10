@@ -55,11 +55,25 @@
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
+					<Name>GVL_FEE_Device.USVacOk_HI</Name>
+					<Comment>
+						<![CDATA[ upstream vacuum <10E-6, for mirror VGC interlock ]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>DIAGNOSTICS.fbEcatDiag.I_AMSNetId</Name>
 					<Comment>
 						<![CDATA[Link to the AMSNETID name in the ethercat master info.]]>
 					</Comment>
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+				</Var>
+				<Var>
+					<Name>GVL_FEE_Device.USVacOk_LO</Name>
+					<Comment>
+						<![CDATA[ upstream vacuum <10E-4, for Ion pump interlock ]]>
+					</Comment>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_FEE_Device.TV1K4_VGC_01.i_xOpnLS</Name>
@@ -93,13 +107,6 @@
 				<Var>
 					<Name>GVL_FEE_Device.ST3K4_PPS_VGC_01.i_xClsLS</Name>
 					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_FEE_Device.MR1K4_GCC_01_ADS.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ Controls and I/Os]]>
-					</Comment>
-					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_FEE_Device.TV1K4_GPI_01.i_iPRESS_R</Name>
@@ -228,13 +235,6 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_FEE_Device.MR1K4_GCC_01_ADS.q_xHV_DIS</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_FEE_Device.TV1K4_GCC_01.q_xHV_DIS</Name>
 					<Comment>
 						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
@@ -332,11 +332,19 @@
 	</Project>
 	<Mappings>
 		<OwnerA Name="PLC_TMO_VAC Instance">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940-R20-CX0 (EK1200)^CX0_E1 (EL2202)">
+				<Link VarA="PlcTask Outputs^GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut" VarB="Channel 2^Output" AutoLink="true"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940-R20-CX0 (EK1200)^CX0_E10_QPC2 (EL1004)">
 				<Link VarA="PlcTask Inputs^GVL_FEE_Device.PC4K4_XTES_PIP_01.i_xSP_DI" VarB="Channel 1^Input" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940-R20-CX0 (EK1200)^CX0_E11_QPC2 (EL2794)">
 				<Link VarA="PlcTask Outputs^GVL_FEE_Device.PC4K4_XTES_PIP_01.q_xHVEna_DO" VarB="Channel 1^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940-R20-CX0 (EK1200)^CX0_E2_EXILK (EL1008)">
+				<Link VarA="PlcTask Inputs^GVL_FEE_Device.USVacOk_HI" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_FEE_Device.USVacOk_LO" VarB="Channel 2^Input"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940-R20-CX0 (EK1200)^CX0_E6_QPC1 (EL3064)">
 				<Link VarA="PlcTask Inputs^GVL_FEE_Device.MR1K4_SOMS_PIP_01.i_iPRESS" VarB="AI Standard Channel 1^Value" AutoLink="true"/>

@@ -10,7 +10,7 @@ VAR_GLOBAL
    USVacOk_HI AT%I* : BOOL; (* upstream vacuum <10E-6, for mirror VGC interlock *)
  
  	{attribute 'pytmc' :=' pv: USVAC:OK:LO '}
-   {attribute 'TcLinkTo' := 	'	:= 	TIIB[CX0_E2_EXILK (EL1008)]^Channel 2^Input	'}	  
+   {attribute 'TcLinkTo' := 	'	:= 	TIIB[CX0_E2_EXILK (EL1008)]^Channel 3^Input	'}	  
    USVacOk_LO AT%I* : BOOL; (* upstream vacuum <10E-4, for Ion pump interlock *)
 
 

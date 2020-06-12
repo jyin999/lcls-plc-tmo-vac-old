@@ -27,7 +27,7 @@ END_VAR
 	(* if upstream vacuum ok, set upstream press at good levels *)  
     IF USVacOk_HI THEN 
 		USG_VGC.xAT_VAC := TRUE;
-		USG_VGC.rPRESS := 10E-6;
+		USG_VGC.rPRESS := 1E-6;
 		USG_VGC.xPRESS_OK := TRUE;
 	ELSE
 		USG_VGC.xPRESS_OK := FALSE;
@@ -35,7 +35,7 @@ END_VAR
 	END_IF
 
     IF USVacOk_LO THEN 
-		USG_PIP.rPRESS := 10E-4;
+		USG_PIP.rPRESS := 1E-4;
 		USG_PIP.xPRESS_OK := TRUE;
 		USG_PIP.xAT_VAC := TRUE;
 	ELSE

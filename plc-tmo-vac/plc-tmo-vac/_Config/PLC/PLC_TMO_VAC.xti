@@ -344,7 +344,7 @@
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940-R20-CX0 (EK1200)^CX0_E2_EXILK (EL1008)">
 				<Link VarA="PlcTask Inputs^GVL_FEE_Device.USVacOk_HI" VarB="Channel 1^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_FEE_Device.USVacOk_LO" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_FEE_Device.USVacOk_LO" VarB="Channel 3^Input"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940-R20-CX0 (EK1200)^CX0_E6_QPC1 (EL3064)">
 				<Link VarA="PlcTask Inputs^GVL_FEE_Device.MR1K4_SOMS_PIP_01.i_iPRESS" VarB="AI Standard Channel 1^Value" AutoLink="true"/>

@@ -90,7 +90,7 @@ GEM1_VGC_10(i_stUSG := USG_GCC.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := TRUE
 				i_xExt_OK := TRUE, 
 				i_xOverrideMode := xSystemOverrideMode_FEE, 
 				i_xReset := xReset_PMPS_FFO2,
-				io_fbFFHWO :=g_FastFaultOutput1);
+				io_fbFFHWO :=g_FastFaultOutput2);
 				
 (*Ion Pumps*)	
 	(*example

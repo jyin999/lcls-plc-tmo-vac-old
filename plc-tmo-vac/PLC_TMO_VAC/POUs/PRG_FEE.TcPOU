@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_FEE" Id="{49021430-2479-452d-9fb0-1e4b70e05342}" SpecialFunc="None">
-    <Declaration><![CDATA[PROGRAM PRG_FEE
+    <Declaration><![CDATA[ PROGRAM PRG_FEE
 VAR
 ADS_connection_counter : UDINT;	
 
@@ -103,27 +103,5 @@ GEM1_VGC_10(i_stUSG := USG_GCC.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := TRUE
 	PC4K4_XTES_PIP_01(i_stGauge := PC4K4_XTES_GCC_01.IG, stPump=>);	
 			]]></ST>
     </Implementation>
-    <LineIds Name="PRG_FEE">
-      <LineId Id="3" Count="0" />
-      <LineId Id="67" Count="0" />
-      <LineId Id="69" Count="5" />
-      <LineId Id="66" Count="0" />
-      <LineId Id="68" Count="0" />
-      <LineId Id="65" Count="0" />
-      <LineId Id="118" Count="0" />
-      <LineId Id="84" Count="2" />
-      <LineId Id="88" Count="0" />
-      <LineId Id="119" Count="0" />
-      <LineId Id="83" Count="0" />
-      <LineId Id="94" Count="0" />
-      <LineId Id="89" Count="2" />
-      <LineId Id="120" Count="0" />
-      <LineId Id="92" Count="1" />
-      <LineId Id="121" Count="0" />
-      <LineId Id="81" Count="0" />
-      <LineId Id="79" Count="1" />
-      <LineId Id="4" Count="56" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

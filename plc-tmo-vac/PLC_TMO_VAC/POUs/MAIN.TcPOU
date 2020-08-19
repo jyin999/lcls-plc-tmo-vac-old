@@ -16,7 +16,8 @@ END_VAR
 DIAGNOSTICS();
 
 (* FEE devices*)
-PRG_FEE ();
+PRG_FEE();
+PMPS();
 
 
 
@@ -26,12 +27,5 @@ PRG_FEE ();
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="MAIN">
-      <LineId Id="3" Count="6" />
-      <LineId Id="37" Count="0" />
-      <LineId Id="36" Count="0" />
-      <LineId Id="10" Count="5" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

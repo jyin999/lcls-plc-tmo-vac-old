@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="PMPS" Id="{354279ff-d518-454c-b9bb-5f6640e67b86}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PMPS
+VAR
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(*FastFaultOuput*)
+g_FastFaultOutput1.Execute(bAutoReset:= TRUE);
+g_FastFaultOutput2.Execute(i_xVeto:=PMPS_GVL.stCurrentBeamParameters.aStoppers[K_Stopper.ST1], bAutoReset:= TRUE);
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -27,7 +27,7 @@ END_VAR
 	(* if upstream vacuum ok, set upstream press at good levels *)  
     IF USVacOk_HI THEN 
 		USG_VGC.xAT_VAC := TRUE;
-		USG_VGC.rPRESS := 1E-6;
+		USG_VGC.rPRESS := 5E-7;
 		USG_VGC.xPRESS_OK := TRUE;
 	ELSE
 		USG_VGC.xPRESS_OK := FALSE;
@@ -35,7 +35,7 @@ END_VAR
 	END_IF
 
     IF USVacOk_LO THEN 
-		USG_PIP.rPRESS := 1E-4;
+		USG_PIP.rPRESS := 5E-5;
 		USG_PIP.xPRESS_OK := TRUE;
 		USG_PIP.xAT_VAC := TRUE;
 	ELSE
@@ -67,8 +67,9 @@ GEM1_VGC_10(i_stUSG := USG_GCC.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := TRUE
 				i_xPMPS_OK := TRUE, 
 				i_xExt_OK := TRUE, 
 				i_xOverrideMode := xSystemOverrideMode_FEE, 
-				i_xReset := xReset_PMPS_FFO2,
-				io_fbFFHWO :=g_FastFaultOutput1);
+				i_xReset := xReset_PMPS_FFO1,
+				io_fbFFHWO :=g_FastFaultOutput1,
+				fbArbiter := g_fbArbiter1);
 	
  	TV1K4_VGC_02(
 				i_stUSG := TV1k4_GCC_01.IG, 
@@ -78,8 +79,9 @@ GEM1_VGC_10(i_stUSG := USG_GCC.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := TRUE
 				i_xPMPS_OK := TRUE, 
 				i_xExt_OK := TRUE, 
 				i_xOverrideMode := xSystemOverrideMode_FEE, 
-				i_xReset := xReset_PMPS_FFO2,
-				io_fbFFHWO :=g_FastFaultOutput1);
+				i_xReset := xReset_PMPS_FFO1,
+				io_fbFFHWO :=g_FastFaultOutput1,
+                fbArbiter := g_fbArbiter1);
 	
 	ST3K4_PPS_VGC_01(
 				i_stUSG := ST2K4_BCS_GCC_01.IG, 
@@ -90,7 +92,8 @@ GEM1_VGC_10(i_stUSG := USG_GCC.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := TRUE
 				i_xExt_OK := TRUE, 
 				i_xOverrideMode := xSystemOverrideMode_FEE, 
 				i_xReset := xReset_PMPS_FFO2,
-				io_fbFFHWO :=g_FastFaultOutput2);
+				io_fbFFHWO :=g_FastFaultOutput2,
+                fbArbiter := g_fbArbiter1);
 				
 (*Ion Pumps*)	
 	(*example

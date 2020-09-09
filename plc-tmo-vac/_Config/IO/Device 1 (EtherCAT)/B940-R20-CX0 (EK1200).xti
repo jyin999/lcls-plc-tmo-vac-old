@@ -46,7 +46,7 @@
 		<Box File="EK1122-0080.xti" Id="37">
 			<EtherCAT PortABoxInfo="#x01000024"/>
 		</Box>
-		<Box File="EK (EL6692).xti" Id="38">
+		<Box File="PMPS_PRE.xti" Id="38">
 			<EtherCAT PortABoxInfo="#x02000025"/>
 		</Box>
 		<Box File="CX0_EK1110.xti" Id="39">

@@ -5,10 +5,10 @@
 VAR_GLOBAL
 	
 //	r_Accelerator_Setpoint	: REAL := 1E-12; (*unrealistic setpoint currently*)
-	{attribute 'pytmc' := 'pv: TMO:FEE:VAC:OVRDON'}
+	{attribute 'pytmc' := 'pv : TMO:FEE:VAC:OVRDON'}
 	xSystemOverrideMode_FEE	: BOOL := FALSE; (* Global system override for the TMO FEE Vacuum System *)
 	
-	{attribute 'pytmc' := 'pv: TMO:NEH:VAC:OVRDON'}
+	{attribute 'pytmc' := 'pv : TMO:NEH:VAC:OVRDON'}
 	xSystemOverrideMode_TMO	: BOOL := FALSE; (* Global system override for the TMO hutch Vacuum System *)
 END_VAR]]></Declaration>
   </GVL>

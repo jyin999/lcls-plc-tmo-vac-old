@@ -14,7 +14,7 @@ VAR_GLOBAL
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[CX0_E1 (EL2202)]^Channel 2^Output'}
     g_FastFaultOutput2  :   FB_HardwareFFOutput;	//FFO for ST3K4_PPS's Downstream Components
 	
-	{attribute 'pytmc' := '    'pv: PLC:TMO:VAC:RESET:FF1    '}
+	{attribute 'pytmc' := '    'pv : PLC:TMO:VAC:RESET:FF1    '}
 	xReset_PMPS_FFO1	:	BOOL	:=	FALSE;		//FFO RESET for ST3K4_PPS's Upstream Components
 	{attribute 'pytmc' := '    pv : PLC:TMO:VAC:RESET:FF2  '}
 	xReset_PMPS_FFO2	:	BOOL	:=	FALSE;		//FFO RESET for ST3K4_PPS's Downstream Components

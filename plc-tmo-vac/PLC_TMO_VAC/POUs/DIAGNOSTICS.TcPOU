@@ -12,9 +12,9 @@ VAR
 	sLibVersion_LCLS_General : STRING;(* := stLibVersion_LCLS_General.sVersion*) ;
 	
 	fbEcatDiag:FB_EcatDiag;
-	{attribute 'pytmc' := ' pv : PLC:TMO:VAC:AllSlaveStateGood '}
+	{attribute 'pytmc' := ' pv: PLC:TMO:VAC:AllSlaveStateGood '}
 	bAllSlaveStateGood : BOOL;
-	{attribute 'pytmc' := ' pv : PLC:TMO:VAC:MasterStateGood '}	
+	{attribute 'pytmc' := ' pv: PLC:TMO:VAC:MasterStateGood '}	
 	bMasterStateGood :BOOL;
 	iMasterState: WORD;
 	sMasterState:STRING;

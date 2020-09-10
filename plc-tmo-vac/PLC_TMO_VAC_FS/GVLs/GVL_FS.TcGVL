@@ -14,7 +14,7 @@ VAR_GLOBAL
 								 
 	'}
 	{attribute 'pytmc' := '
-		pv : TV1K4:VFS:01
+		pv: TV1K4:VFS:01
 		
 	'}
 	TV1K4_VFS_01 : FB_VFS;

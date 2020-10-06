@@ -15,7 +15,34 @@
     <LibraryReferences>{305ce49b-f61a-4652-a946-d955e26fe5fe}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ComTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FSVTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GVLs\GVL_COM.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
     <Compile Include="GVLs\GVL_FEE_Device.TcGVL">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GVLs\GVL_FSV_PMPS.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="GVLs\GVL_FS_Devices.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="GVLs\GVL_Hutch_Gauges.TcGVL">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GVLs\GVL_Hutch_Pumps.TcGVL">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GVLs\GVL_Hutch_Valves.TcGVL">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="GVLs\GVL_PMPS.TcGVL">
@@ -30,13 +57,31 @@
     <Compile Include="POUs\DIAGNOSTICS.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\F_Turbo_Protection_ILK.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PMPS.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\PRG_COM.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\PRG_FEE.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_FSV.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_Hutch_Beamline_Valves.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_Hutch_Gauges.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_Roughing_Pumps.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_Section_2.TcPOU">
@@ -58,9 +103,17 @@
       <DefaultResolution>LCLS Vacuum, * (SLAC - LCLS)</DefaultResolution>
       <Namespace>LCLS_Vacuum</Namespace>
     </PlaceholderReference>
+    <PlaceholderReference Include="LCLSVacuumSerialDriverLib">
+      <DefaultResolution>LCLSVacuumSerialDriverLib, * (SLAC - LCLS)</DefaultResolution>
+      <Namespace>LCLS_Vacuum_Serial</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="PMPS">
       <DefaultResolution>PMPS, * (SLAC - LCLS)</DefaultResolution>
       <Namespace>PMPS</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_SerialCom">
+      <DefaultResolution>Tc2_SerialCom, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_SerialCom</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="Tc2_Standard">
       <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
@@ -80,7 +133,10 @@
       <Resolution>LCLS General, * (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="LCLS Vacuum">
-      <Resolution>LCLS Vacuum, * (SLAC - LCLS)</Resolution>
+      <Resolution>LCLS Vacuum, 0.0.0 (SLAC - LCLS)</Resolution>
+    </PlaceholderResolution>
+    <PlaceholderResolution Include="LCLSVacuumSerialDriverLib">
+      <Resolution>LCLSVacuumSerialDriverLib, 0.0.0 (SLAC - LCLS)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="PMPS">
       <Resolution>PMPS, * (SLAC - LCLS)</Resolution>

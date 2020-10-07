@@ -75,6 +75,9 @@
     <Compile Include="POUs\PRG_FSV.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\PRG_FSV_Interfaces.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\PRG_Hutch_Beamline_Valves.TcPOU">
       <SubType>Code</SubType>
     </Compile>

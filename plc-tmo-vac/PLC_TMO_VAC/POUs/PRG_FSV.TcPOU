@@ -6,7 +6,15 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[MR3K4_KBO_VFS_1(
+      <ST><![CDATA[
+TV1K4_VFS_1(
+	i_xPMPS_OK:= TRUE, 
+	i_xExt_OK:= TRUE, 
+	i_sDevName:= 'TV1K4:VFS:01', 
+	io_fbFFHWO:= g_FastFaultOutput4 );
+	
+
+MR3K4_KBO_VFS_1(
 	i_xPMPS_OK:= TRUE, 
 	i_xExt_OK:= TRUE, 
 	i_sDevName:= 'MR3K4:KBO:VFS:1',
@@ -23,6 +31,11 @@ MR4K4_KBO_VFS_1(
 g_FastFaultOutput3.Execute(bAutoReset:= TRUE);]]></ST>
     </Implementation>
     <LineIds Name="PRG_FSV">
+      <LineId Id="23" Count="0" />
+      <LineId Id="26" Count="3" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="25" Count="0" />
       <LineId Id="6" Count="13" />
       <LineId Id="5" Count="0" />
     </LineIds>

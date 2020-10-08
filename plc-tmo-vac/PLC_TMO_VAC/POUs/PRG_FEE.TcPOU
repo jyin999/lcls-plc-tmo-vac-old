@@ -49,10 +49,10 @@ END_VAR
 	ST2K4_BCS_GPI_01();
 	PC4K4_XTES_GPI_01(); 
 	
-	TV1k4_GCC_01(PG:=TV1k4_GPI_01.PG , IG=> );
-	ST1K4_TEST_GCC_01(PG:=ST1K4_TEST_GPI_01.PG , IG=> ); 
-	ST2K4_BCS_GCC_01(PG:=ST2K4_BCS_GPI_01.PG , IG=> );
-	PC4K4_XTES_GCC_01(PG:=PC4K4_XTES_GPI_01.PG , IG=> );
+	TV1k4_GCC_01(PG:=TV1k4_GPI_01.PG , IG=> , bEP := TRUE );
+	ST1K4_TEST_GCC_01(PG:=ST1K4_TEST_GPI_01.PG , IG=> , bEP := TRUE); 
+	ST2K4_BCS_GCC_01(PG:=ST2K4_BCS_GPI_01.PG , IG=> , bEP := TRUE);
+	PC4K4_XTES_GCC_01(PG:=PC4K4_XTES_GPI_01.PG , IG=> , bEP := TRUE );
 		
 (* Valves*)
 (*example
@@ -106,5 +106,9 @@ GEM1_VGC_10(i_stUSG := USG_GCC.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := TRUE
 	PC4K4_XTES_PIP_01(i_stGauge := PC4K4_XTES_GCC_01.IG, stPump=>);	
 			]]></ST>
     </Implementation>
+    <LineIds Name="PRG_FEE">
+      <LineId Id="3" Count="88" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

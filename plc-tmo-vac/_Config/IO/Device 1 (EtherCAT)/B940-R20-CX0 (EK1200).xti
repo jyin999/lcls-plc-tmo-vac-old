@@ -10,8 +10,11 @@
 		<Box File="CX0_E1 (EL2202).xti" Id="25">
 			<EtherCAT PortABoxInfo="#x01000018"/>
 		</Box>
-		<Box File="CX0_E2_EXILK (EL1008).xti" Id="26">
+		<Box File="CX0_E1A (EL2202).xti" Id="104">
 			<EtherCAT PortABoxInfo="#x01000019"/>
+		</Box>
+		<Box File="CX0_E2_EXILK (EL1008).xti" Id="26">
+			<EtherCAT PortABoxInfo="#x01000068"/>
 		</Box>
 		<Box File="CX0_E3 (EL2008).xti" Id="27">
 			<EtherCAT PortABoxInfo="#x0100001a"/>

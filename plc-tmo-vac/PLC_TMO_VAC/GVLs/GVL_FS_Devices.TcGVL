@@ -25,12 +25,12 @@
 
 
 	{attribute 'TcLinkTo' := 	'
-		.q_xClose_A	:=	TIIB[B940_K4S20_EK0  (EK1100)^K4S20-E2-FSV (EL2202)^Channel 1^Output;
-		.q_xClose_B	:=	TIIB[B940_K4S20_EK0  (EK1100)^K4S20-E2-FSV (EL2202)^Channel 2^Output;
-		.q_xClose_C	:=	TIIB[B940_K4S20_EK0  (EK1100)^K4S20-E3-FSV (EL2202)^Channel 1^Output;
-		.q_xOPN_DO	:=	TIIB[B940_K4S20_EK0  (EK1100)^K4S20-E3-FSV (EL2202)^Channel 2^Output;
-		.i_xClsLS	:=	TIIB[B940_K4S20_EK0  (EK1100)^K4S20-E1-FSV (EL1004)^Channel 1^Input;
-		.i_xOpnLS	:=	TIIB[B940_K4S20_EK0  (EK1100)^K4S20-E1-FSV (EL1004)^Channel 2^Input;
+		.q_xClose_A	:=	TIIB[B940_K4S20_EK0  (EK1100)]^K4S20-E2-FSV (EL2202)^Channel 1^Output;
+		.q_xClose_B	:=	TIIB[B940_K4S20_EK0  (EK1100)]^K4S20-E2-FSV (EL2202)^Channel 2^Output;
+		.q_xClose_C	:=	TIIB[B940_K4S20_EK0  (EK1100)]^K4S20-E3-FSV (EL2202)^Channel 1^Output;
+		.q_xOPN_DO	:=	TIIB[B940_K4S20_EK0  (EK1100)]^K4S20-E3-FSV (EL2202)^Channel 2^Output;
+		.i_xClsLS	:=	TIIB[B940_K4S20_EK0  (EK1100)]^K4S20-E1-FSV (EL1004)^Channel 1^Input;
+		.i_xOpnLS	:=	TIIB[B940_K4S20_EK0  (EK1100)]^K4S20-E1-FSV (EL1004)^Channel 2^Input;
 		.i_xTrigger := 	TIIB[B940_R20_EK0 (EK1100)]^R20_EK0_E5_MKS937B (EL1124)^Channel 1^Input '}
 	TV1K4_VFS_1 : FB_VFS;	
 	

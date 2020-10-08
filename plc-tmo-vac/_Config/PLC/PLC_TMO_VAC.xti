@@ -614,6 +614,10 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_FSV_PMPS.g_FastFaultOutput4.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_FS_Devices.TV1K4_VFS_1.q_xClose_A</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -786,10 +790,6 @@
 						<![CDATA[Interface]]>
 					</Comment>
 					<Type GUID="{73C99071-D30E-478E-AF4C-873F5C405025}" Namespace="LCLS_Vacuum">E_VGC</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PMPS.g_FastFaultOutput4.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
 				</Var>
 			</Vars>
 			<Vars VarGrpType="8">
@@ -2549,6 +2549,18 @@
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940_K4S20_EB3 (EP2624-0002)">
 				<Link VarA="PlcTask Outputs^GVL_FEE_Device.TV1K4_GCC_01.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940_K4S20_EK0  (EK1100)^K4S20-E1-FSV (EL1004)">
+				<Link VarA="FSVTask Inputs^GVL_FS_Devices.TV1K4_VFS_1.i_xClsLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="FSVTask Inputs^GVL_FS_Devices.TV1K4_VFS_1.i_xOpnLS" VarB="Channel 2^Input" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940_K4S20_EK0  (EK1100)^K4S20-E2-FSV (EL2202)">
+				<Link VarA="FSVTask Outputs^GVL_FS_Devices.TV1K4_VFS_1.q_xClose_A" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="FSVTask Outputs^GVL_FS_Devices.TV1K4_VFS_1.q_xClose_B" VarB="Channel 2^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940_K4S20_EK0  (EK1100)^K4S20-E3-FSV (EL2202)">
+				<Link VarA="FSVTask Outputs^GVL_FS_Devices.TV1K4_VFS_1.q_xClose_C" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="FSVTask Outputs^GVL_FS_Devices.TV1K4_VFS_1.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^B940_K4S24_EB1 (EP3174-0002)">
 				<Link VarA="PlcTask Inputs^GVL_FEE_Device.ST1K4_TEST_GCC_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>

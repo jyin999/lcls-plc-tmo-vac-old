@@ -106,8 +106,15 @@ VAR_GLOBAL
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[TMO_K4S2_ EP1 (EP4374-0002)]^AI Inputs Channel 2^Value	'}	
 	TMO_ROUGH2_GPI_02 : FB_9XX;	
 	
+// 	Read LAMP devices using ADS interface
+	lamp_turbo_running_reader : FB_TBOOL_ADS;
 	
+	{attribute 'pytmc' :=' pv: LAMP:ROUGH:GPI02:reader '}
+	LAMP_ROUGH_GPI02_reader : FB_TGPI_ADS;
 	
+	{attribute 'pytmc' :=' pv: LAMP:ROUGH:GPI04:reader '}
+	LAMP_ROUGH_GPI04_reader : FB_TGPI_ADS;
+		
 
 END_VAR]]></Declaration>
   </GVL>

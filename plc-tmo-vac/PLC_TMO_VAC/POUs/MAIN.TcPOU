@@ -12,8 +12,8 @@ END_VAR
       <ST><![CDATA[
 fbLogHandler();
 
-// Run the Diagnostics PRG
-DIAGNOSTICS();
+// ADS interface PRG
+PRG_ADS_Interfaces();
 
 (* FEE devices*)
 PRG_FEE();

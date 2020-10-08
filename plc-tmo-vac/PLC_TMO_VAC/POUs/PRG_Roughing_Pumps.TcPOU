@@ -9,7 +9,7 @@ VAR
 	xRough2Vrc01_OpenOK: BOOL := False;
 	dummy_FFFO : FB_HardwareFFOutput;
 	dummy_fbArbiter1    :   FB_Arbiter(1);
-	
+		
 	PA1K4_IP1_PTM_01_xExtIlkOK: BOOL := FALSE;
 	PA1K4_IP1_PTM_02_xExtIlkOK: BOOL := FALSE;
 	PA1K4_IP1_PTM_03_xExtIlkOK: BOOL := False;
